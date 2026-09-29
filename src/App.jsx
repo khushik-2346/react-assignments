@@ -8,10 +8,11 @@ import Footer from "./components/Footer";
 import StudentApp from "./assignment2/StudentApp";
 import EmployeeApp from "./assignment3/EmployeeApp";
 import WeatherApp from "./assignment4/WeatherApp";
+import ShoppingCart from "./assignment5/ShoppingCart";
 import "./Portfolio.css";
 
 export default function App() {
-  const [activeAssignment, setActiveAssignment] = useState(4);
+  const [activeAssignment, setActiveAssignment] = useState(5);
 
   return (
     <div>
@@ -97,6 +98,23 @@ export default function App() {
         >
           Assignment 4: Weather Dashboard
         </button>
+
+        <button
+          onClick={() => setActiveAssignment(5)}
+          style={{
+            padding: "8px 16px",
+            borderRadius: "6px",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
+            cursor: "pointer",
+            fontWeight: "600",
+            fontSize: "0.85rem",
+            background: activeAssignment === 5 ? "#38bdf8" : "#1e293b",
+            color: activeAssignment === 5 ? "#0b0f19" : "#94a3b8",
+            transition: "all 0.2s ease",
+          }}
+        >
+          Assignment 5: Shopping Cart
+        </button>
       </nav>
 
       {/* Render active assignment */}
@@ -118,6 +136,8 @@ export default function App() {
       {activeAssignment === 3 && <EmployeeApp />}
 
       {activeAssignment === 4 && <WeatherApp />}
+
+      {activeAssignment === 5 && <ShoppingCart />}
     </div>
   );
 }
