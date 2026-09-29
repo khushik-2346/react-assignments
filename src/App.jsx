@@ -10,10 +10,11 @@ import EmployeeApp from "./assignment3/EmployeeApp";
 import WeatherApp from "./assignment4/WeatherApp";
 import ShoppingCart from "./assignment5/ShoppingCart";
 import TaskManager from "./assignment6/TaskManager";
+import AuthSystem from "./assignment7/AuthSystem";
 import "./Portfolio.css";
 
 export default function App() {
-  const [activeAssignment, setActiveAssignment] = useState(6);
+  const [activeAssignment, setActiveAssignment] = useState(7);
 
   return (
     <div>
@@ -133,6 +134,23 @@ export default function App() {
         >
           Assignment 6: Task Manager
         </button>
+
+        <button
+          onClick={() => setActiveAssignment(7)}
+          style={{
+            padding: "8px 16px",
+            borderRadius: "6px",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
+            cursor: "pointer",
+            fontWeight: "600",
+            fontSize: "0.85rem",
+            background: activeAssignment === 7 ? "#38bdf8" : "#1e293b",
+            color: activeAssignment === 7 ? "#0b0f19" : "#94a3b8",
+            transition: "all 0.2s ease",
+          }}
+        >
+          Assignment 7: Authentication
+        </button>
       </nav>
 
       {/* Render active assignment */}
@@ -158,6 +176,8 @@ export default function App() {
       {activeAssignment === 5 && <ShoppingCart />}
 
       {activeAssignment === 6 && <TaskManager />}
+
+      {activeAssignment === 7 && <AuthSystem />}
     </div>
   );
 }

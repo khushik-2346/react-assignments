@@ -1,0 +1,263 @@
+.auth-app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* Header */
+.auth-header {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.auth-header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.35rem;
+}
+
+.auth-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Auth Card (Login) */
+.auth-card {
+  max-width: 440px;
+  margin: 0 auto;
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2.2rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.auth-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form Controls */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.form-field input[type="text"],
+.form-field input[type="password"] {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.7rem 0.95rem;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-field input:focus {
+  border-color: #38bdf8;
+}
+
+.input-error {
+  color: #f87171;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Password Strength Indicator */
+.strength-box {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.strength-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.strength-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-text {
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Remember Me Checkbox */
+.remember-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.remember-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #38bdf8;
+  cursor: pointer;
+}
+
+.remember-row span {
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+/* Submit Button */
+.btn-auth-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: #0b0f19;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-auth-submit:hover {
+  opacity: 0.9;
+}
+
+/* Protected Dashboard Screen */
+.dashboard-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.user-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #0b0f19;
+}
+
+.btn-logout {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+  background: rgba(239, 68, 68, 0.25);
+  color: #ef4444;
+}
+
+/* JWT Token Inspector Box */
+.jwt-inspector {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.jwt-inspector-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #38bdf8;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.jwt-token-display {
+  font-family: monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  word-break: break-all;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.storage-status {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
