@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Navbar from "./assignment1/Navbar";
+import About from "./assignment1/About";
+import Education from "./assignment1/Education";
+import Skills from "./assignment1/Skills";
+import Contact from "./assignment1/Contact";
+import Footer from "./assignment1/Footer";
 import StudentApp from "./assignment2/StudentApp";
 import EmployeeApp from "./assignment3/EmployeeApp";
 import WeatherApp from "./assignment4/WeatherApp";
@@ -14,7 +14,7 @@ import AuthSystem from "./assignment7/AuthSystem";
 import "./Portfolio.css";
 
 export default function App() {
-  const [activeAssignment, setActiveAssignment] = useState(7);
+  const [activeAssignment, setActiveAssignment] = useState(1);
 
   return (
     <div>
